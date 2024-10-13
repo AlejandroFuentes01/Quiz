@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados del Quiz</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Fuente kawaii desde Google Fonts -->
+</head>
+<body>
+    <div id="resultadosContainer" style="text-align: center; margin-top: 50px;">
+        <!-- Mensaje de felicitación -->
+        <h2 id="felicitacionesText">¡Felicidades, mi amor!</h2>
+        <p id="mensajeAmor" style="font-size: 18px; margin-top: 20px; color: #8a2be2;">
+            Sabía que lo harías increíble, como siempre. No solo en este quiz, sino en cada momento que compartimos. <br>
+            Eres la razón de mi felicidad. 💜
+        </p>
+
+        <!-- Mostrar los resultados (aciertos/total) -->
+        <h2 id="resultadosText" style="margin-top: 30px;">10/11</h2>
+
+        <!-- Gif de felicitación -->
+        <img src="https://i.pinimg.com/originals/1a/67/a6/1a67a6ce5f7e78b68cc1166993788b0e.gif" alt="Felicitación"
+            style="width: 300px; margin-top: 20px;">
+    </div>
+
+    <script>
+        // Función para obtener los parámetros de la URL
+        function obtenerParametrosURL() {
+            const params = new URLSearchParams(window.location.search);
+            const aciertos = params.get('aciertos');
+            const totalPreguntas = params.get('total');
+            return { aciertos, totalPreguntas };
+        }
+
+        // Obtener los aciertos y total de preguntas desde la URL
+        const { aciertos, totalPreguntas } = obtenerParametrosURL();
+
+        // Mostrar los resultados
+        document.getElementById("resultadosText").innerText = `${aciertos}/${totalPreguntas}`;
+    </script>
+</body>
+</html>

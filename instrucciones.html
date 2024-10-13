@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instrucciones - Mi Quiz</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Fuente kawaii desde Google Fonts -->
+</head>
+<body>
+    <div id="instrucciones">
+        <!-- Agregamos el GIF aquí -->
+        <img src="https://i.pinimg.com/originals/42/a5/ca/42a5caa1129d7c9bc8a592b1d00a2fe4.gif" alt="GIF kawaii de instrucciones" class="gif-instrucciones">
+
+        <h1>Instrucciones</h1>
+        <p>¡Bienvenido a Mi Quiz!</p>
+        <p>
+            Adivina la mayoria de las preguntas en el tiempo correspondiente y ganaras una
+            muñeca de Glinda Reina. ¡Buena suerte!
+        </p>
+        <button id="aceptarInstrucciones">Aceptar</button>
+    </div>
+
+    <script>
+        document.getElementById("aceptarInstrucciones").addEventListener("click", function() {
+            window.location.href = "quiz.html"; // Llama a la página del quiz
+        });
+    </script>
+</body>
+</html>

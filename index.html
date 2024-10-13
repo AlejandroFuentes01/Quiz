@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Quiz - Bienvenida</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Fuente kawaii desde Google Fonts -->
+</head>
+<body>
+    <div id="inicio">
+        <img src="https://i.pinimg.com/originals/62/db/78/62db782fa9d80b351e4f8a4d3db48c00.gif" alt="GIF de bienvenida" class="gif-bienvenida">
+
+        <h1>¡Bienvenido a Mi Quiz!</h1>
+        <button id="iniciarQuiz">Iniciar</button>
+    </div>
+
+    <script>
+        document.getElementById("iniciarQuiz").addEventListener("click", function() {
+            window.location.href = "instrucciones.html"; // Llama a la página de instrucciones
+        });
+    </script>
+</body>
+</html>

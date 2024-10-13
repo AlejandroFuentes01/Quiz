@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz - Mi Quiz</title>
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Script de EmailJS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init({
+                publicKey: "8sY4aDZcbqZ3TZ57z" // Reemplaza por tu Public Key
+            });
+        })();
+    </script>
+</head>
+<body>
+    <div id="quizContainer">
+        <h2 id="question"></h2>
+        <form id="quizForm">
+            <div id="options"></div>
+        </form>
+
+        <!-- Barra de progreso -->
+        <div id="progressBar">
+            <div id="progress"></div>
+        </div>
+
+        <!-- Contenedor para la alerta de resultado -->
+        <div id="alerta" class="oculto"></div>
+    </div>
+
+    <!-- Vinculación al archivo quiz.js -->
+    <script src="js/quiz.js"></script>
+</body>
+</html>
